@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Trade With Munaf - Official</title>
+
+ <!-- Meta Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '1551397499421834');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=1551397499421834&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Meta Pixel Code -->
+
+  <style>
+    *{margin:0;padding:0;box-sizing:border-box;font-family:Arial,Helvetica,sans-serif;}
+
+    body{
+      min-height:100vh;
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      padding:18px;
+      color:#fff;
+      background:#0b0f14;
+      overflow-x:hidden;
+    }
+
+    body::before{
+      content:"";
+      position:fixed;
+      inset:0;
+      background:
+        radial-gradient(circle at 20% 20%, rgba(0, 140, 255, 0.12), transparent 40%),
+        radial-gradient(circle at 80% 30%, rgba(0, 255, 180, 0.10), transparent 45%),
+        radial-gradient(circle at 50% 80%, rgba(255, 200, 0, 0.10), transparent 40%),
+        linear-gradient(135deg, rgba(255,255,255,0.05) 1px, transparent 1px),
+        linear-gradient(45deg, rgba(255,255,255,0.05) 1px, transparent 1px);
+      background-size: auto, auto, auto, 40px 40px, 40px 40px;
+      opacity:0.9;
+      z-index:-2;
+    }
+
+    .card{
+      width:100%;
+      max-width:420px;
+      background:rgba(20,20,20,0.88);
+      border:1px solid rgba(255,255,255,0.12);
+      border-radius:22px;
+      padding:22px 18px 18px;
+      box-shadow:0 10px 40px rgba(0,0,0,0.55);
+      backdrop-filter: blur(12px);
+      text-align:center;
+      position:relative;
+    }
+
+    .avatarWrap{
+      width:120px;
+      height:120px;
+      margin:0 auto 14px;
+      border-radius:50%;
+      padding:4px;
+      background:linear-gradient(135deg,#ffcc00,#ff9900);
+      display:flex;
+      align-items:center;
+      justify-content:center;
+    }
+
+    .avatar{
+      width:100%;
+      height:100%;
+      border-radius:50%;
+      object-fit:cover;
+      border:2px solid rgba(0,0,0,0.6);
+      background:#111;
+    }
+
+    .title{
+      font-size:38px;
+      font-weight:800;
+      color:#ffcc00;
+      line-height:1.05;
+      margin-top:6px;
+      text-transform:capitalize;
+      text-shadow:0 2px 12px rgba(0,0,0,0.6);
+    }
+
+    .subtitle{
+      margin:10px auto 14px;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      gap:10px;
+      font-size:16px;
+      opacity:0.92;
+    }
+
+    .pills{
+      display:flex;
+      justify-content:center;
+      gap:12px;
+      margin:8px 0 14px;
+      flex-wrap:wrap;
+    }
+
+    .pill{
+      background:rgba(255,255,255,0.08);
+      border:1px solid rgba(255,255,255,0.12);
+      padding:10px 14px;
+      border-radius:14px;
+      font-weight:700;
+      font-size:15px;
+      min-width:140px;
+    }
+
+    /* Timer Box */
+    .timerBox{
+      margin:12px 0 16px;
+      padding:12px 14px;
+      border-radius:16px;
+      background:rgba(255,255,255,0.06);
+      border:1px solid rgba(255,255,255,0.10);
+      font-size:15px;
+      font-weight:700;
+      line-height:1.4;
+    }
+    .timerBox span{
+      color:#00d1ff;
+      font-weight:900;
+      font-size:18px;
+    }
+
+    /* Telegram Button - ORIGINAL STYLE */
+    .tgBtn{
+      width:100%;
+      display:flex;
+      justify-content:center;
+      margin:10px 0 18px;
+    }
+
+    .tgBtn button{
+      width:100%;
+      border:none;
+      cursor:pointer;
+      padding:16px 16px;
+      border-radius:16px;
+      font-size:20px;
+      font-weight:900;
+      color:#fff;
+      background:#2AABEE; /* Telegram official */
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      gap:10px;
+      box-shadow:0 0 0 rgba(42,171,238,0.0);
+      animation: hardBlink 0.55s infinite alternate, pulseGlow 0.8s infinite;
+    }
+
+    .tgBtn button:active{
+      transform:scale(0.98);
+    }
+
+    .tgIcon{
+      width:26px;
+      height:26px;
+      display:inline-block;
+    }
+
+    @keyframes hardBlink{
+      0%{filter:brightness(1);opacity:1;}
+      100%{filter:brightness(1.7);opacity:0.7;}
+    }
+
+    @keyframes pulseGlow{
+      0%{box-shadow:0 0 0px rgba(42,171,238,0.0);}
+      50%{box-shadow:0 0 28px rgba(42,171,238,0.65);}
+      100%{box-shadow:0 0 0px rgba(42,171,238,0.0);}
+    }
+
+    .features{
+      margin-top:10px;
+      display:flex;
+      flex-direction:column;
+      gap:14px;
+    }
+
+    .feature{
+      display:flex;
+      align-items:center;
+      gap:12px;
+      padding:16px 14px;
+      border-radius:16px;
+      background:rgba(255,255,255,0.06);
+      border:1px solid rgba(255,255,255,0.10);
+      font-size:17px;
+      font-weight:700;
+      text-align:left;
+    }
+
+    .ok{
+      width:26px;
+      height:26px;
+      border-radius:50%;
+      background:#00ff99;
+      color:#001b10;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      font-weight:900;
+      font-size:16px;
+      flex-shrink:0;
+      box-shadow:0 0 18px rgba(0,255,153,0.35);
+    }
+
+    .note{
+      margin-top:12px;
+      font-size:13px;
+      opacity:0.75;
+    }
+
+    .footerText{
+      margin-top:16px;
+      font-size:12px;
+      opacity:0.7;
+      line-height:1.4;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="card">
+
+    <div class="avatarWrap">
+      <img class="avatar" src="profile.jpg" alt="Trade With Munaf" />
+    </div>
+
+    <div class="title">
+      Trade With<br/>Munaf™️
+    </div>
+
+    <div class="subtitle">
+      <span>✅</span>
+      <span>Trusted by thousands of learners</span>
+    </div>
+
+    <div class="pills">
+      <div class="pill">24/7 Updates</div>
+      <div class="pill">Free to Join</div>
+    </div>
+
+    <!-- 10 sec timer -->
+    <div class="timerBox">
+      Auto joining in <span id="timer">10</span> seconds...<br/>
+      If not opened, click the button below 👇
+    </div>
+
+    <!-- Telegram Button -->
+    <div class="tgBtn">
+      <button id="joinBtn" type="button">
+        <svg class="tgIcon" viewBox="0 0 240 240" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="120" cy="120" r="120" fill="white" opacity="0.15"/>
+          <path d="M200.5 63.4 171.8 196c-2.2 9.4-8.2 11.7-16.6 7.3l-46-33.9-22.2 21.4c-2.5 2.5-4.6 4.6-9.4 4.6l3.4-48.6 88.5-79.9c3.9-3.4-.9-5.3-6-1.9l-109.4 68.9-47.1-14.7c-10.2-3.2-10.4-10.2 2.1-15.1l184.1-71c8.5-3.1 15.9 2.1 13.1 15.3z"
+                fill="white"/>
+        </svg>
+        Join Telegram
+      </button>
+    </div>
+
+    <div class="features">
+      <div class="feature">
+        <div class="ok">✓</div>
+        <div>Market Insights & Discussions</div>
+      </div>
+
+      <div class="feature">
+        <div class="ok">✓</div>
+        <div>Learn with Experts</div>
+      </div>
+
+      <div class="feature">
+        <div class="ok">✓</div>
+        <div>Practical Strategies</div>
+      </div>
+    </div>
+
+    <div class="note">
+      ⚠️ Note: Only serious learners join the Telegram channel.
+    </div>
+
+    <div class="footerText">
+      By joining, you agree to be contacted for educational updates.
+    </div>
+
+  </div>
+
+  <script>
+    const TG_LINK = "https://t.me/+PMq4xxG9gpkwOWI1";
+
+    // Lead track + open telegram
+    function openTelegramWithLead(){
+      try{
+        if(typeof fbq === "function"){
+          fbq('track', 'Lead'); // ✅ Lead event
+        }
+      }catch(e){}
+
+      window.open(TG_LINK, "_blank");
+    }
+
+    // Button click
+    const joinBtn = document.getElementById("joinBtn");
+    joinBtn.addEventListener("click", function(){
+      openTelegramWithLead();
+    });
+
+    // 10 sec timer auto open
+    let timeLeft = 10;
+    const timerEl = document.getElementById("timer");
+
+    const interval = setInterval(() => {
+      timeLeft--;
+      timerEl.textContent = timeLeft;
+
+      if(timeLeft <= 0){
+        clearInterval(interval);
+        openTelegramWithLead();
+      }
+    }, 1000);
+  </script>
+
+</body>
+</html>
